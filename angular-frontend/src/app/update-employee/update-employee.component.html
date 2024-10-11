@@ -1,0 +1,25 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Update Employee </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> First Name</label>
+            <input type="text" class="form-control" id="firstName"
+            [(ngModel)]= "employee.firstName" name="firstName">
+            <!-- (ngModel) - this is the directive we are using for two way binding as soon as we enter in input text then correspondence property get updated
+             Same like if we update the property in component class then input text box will get updated 
+             (ngModel) directive is present in seperate package which is in FormsModule we need to import it in AppModule-->
+        </div>
+        <div class="form-group">
+            <label> Last Name</label>
+            <input type="text" class="form-control" id="lastName"
+            [(ngModel)]= "employee.lastName" name="lastName">
+        </div>
+        <div class="form-group">
+            <label> Email Id</label>
+            <input type="text" class="form-control" id="emailId"
+            [(ngModel)]= "employee.emailId" name="emailId">
+        </div> 
+        <button class="btn btn-primary" type="submit" > Submit </button>
+    
+    </form> 

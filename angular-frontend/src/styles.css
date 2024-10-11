@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+footer
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(183, 29, 67);
+    text-align: center;
+    color: white;
+}
+
+.scrollable-container {
+    height: 80vh; /* Set the height to 80% of the viewport height */
+    overflow-y: auto; /* Add a vertical scrollbar when the content exceeds the height */
+    padding: 20px; /* Add some padding to make the content look better */
+  }
+
+  .scrollable-container table th:nth-child(3), 
+.scrollable-container table th:nth-child(4) {
+  text-align: center;
+}
+
+.scrollable-container table td:nth-child(3), 
+.scrollable-container table td:nth-child(4) {
+  text-align: center;
+}

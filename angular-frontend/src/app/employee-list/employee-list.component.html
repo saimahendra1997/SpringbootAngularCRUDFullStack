@@ -1,0 +1,28 @@
+<div class="scrollable-container">
+    <h2> Employee List</h2>
+    <table class="table table-stripped "> <!-- Bootstarp css classes-->
+      <thead>
+        <tr>
+          <th> First Name </th>
+          <th> Last Name </th>
+          <th> Email Id </th>
+          <th> Actions </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let employee of employees">
+          <!-- Using ngFor which is angular inbuilt directive to iterate over list of employees
+           It is same like for loop in java but the differnce here it is it iterates over html elements 
+           Within double quote creating a javascript variable -->
+          <td>{{employee.firstName}}</td>
+          <td>{{employee.lastName}}</td>
+          <td>{{employee.emailId}}</td>
+          <td>
+            <button (click) = "updateEmployee(employee.id ?? 0)" class="btn btn-info"> Update </button>
+            <button (click) = "deleteEmployee(employee.id ?? 0)" class="btn btn-danger" style="margin-left: 10px"> Delete </button>
+            <button (click) = "employeeDetails(employee.id ?? 0)" class="btn btn-info" style="margin-left: 10px"> View </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
